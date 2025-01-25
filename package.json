@@ -25,6 +25,7 @@
   "peerDependencies": {
     "vite": "*"
   },
+  "packageManager": "pnpm@9.7.0",
   "prettier": {
     "semi": true,
     "singleQuote": false,
