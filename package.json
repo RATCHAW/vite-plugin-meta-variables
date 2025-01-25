@@ -1,13 +1,16 @@
 {
   "name": "vite-plugin-meta-variables",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.3",
   "type": "module",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc && vite build",
     "format": "prettier --write 'src/**/*.{ts,tsx,css,json}'"
   },
-  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "@rollup/plugin-typescript": "^12.1.2",
     "@types/node": "^22.10.7",
