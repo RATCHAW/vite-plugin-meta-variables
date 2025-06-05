@@ -42,7 +42,7 @@ export const metaVariables = (options: MetaVariablesJsonConfig): Plugin => {
       let script: string | undefined;
       return runtimeJsonConfig.JsonFiles.map((file) => {
         const destFilePath = path.resolve(file.path);
-        const source = fs.readFileSync(destFilePath);
+        const source = JSON.parse(fs.readFileSync(destFilePath, "utf-8"));
         if (vite_config.command === "serve") {
           script = `${GLOBAL_OBJECT}.${file.name} = {...${GLOBAL_OBJECT}.${file.name}, ...${JSON.stringify(source)}};`;
         } else {

@@ -1,5 +1,6 @@
-import type { MetaVariablesJsonConfig } from "./types";
-export { metaVariables } from './plugin';
+import { MetaVariablesJsonConfig } from "./types";
+
+export { metaVariables } from "./plugin";
 declare module "vite" {
   interface UserConfig {
     /**
@@ -8,3 +9,4 @@ declare module "vite" {
     metaVariables?: MetaVariablesJsonConfig;
   }
 }
+export type { MetaVariablesJsonConfig } from "./types";
